@@ -1,0 +1,37 @@
+Welcome to Yahtzee developed by AncientGeeks!
+
+By using this app, you agree to the following terms and conditions:
+
+Acceptance of Terms
+By accessing or using Yahtzee, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use this app.
+
+Use of Yahtzee
+You may use Yahtzee only for lawful purposes and in accordance with these Terms of Service. You agree not to use Yahtzee:
+
+a. In any way that violates any applicable federal, state, local, or international law or regulation.
+
+b. To transmit any unsolicited or unauthorized advertising, promotional materials, junk mail, spam, chain letters, or any other form of solicitation.
+
+c. To impersonate or attempt to impersonate Yahtzee, a Yahtzee employee, another user, or any other person or entity.
+
+d. To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of Yahtzee, or which, as determined by Yahtzee, may harm Yahtzee or users of Yahtzee.
+
+Intellectual Property
+All content included in Yahtzee, including but not limited to text, graphics, logos, images, and software, is the property of Yahtzee or its licensors and is protected by applicable copyright and trademark laws. You agree not to reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on Yahtzee, except as follows:
+a. Your computer or mobile device may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.
+
+b. You may store files that are automatically cached by your Web browser for display enhancement purposes.
+
+c. You may print or download one copy of a reasonable number of pages of Yahtzee for your own personal, non-commercial use and not for further reproduction, publication, or distribution.
+
+Privacy Policy
+Please review our Privacy Policy, which also governs your use of Yahtzee, to understand our practices.
+
+Disclaimer of Warranties and Limitation of Liability
+Yahtzee is provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. Yahtzee disclaims all warranties, including but not limited to, warranties of merchantability, fitness for a particular purpose, and non-infringement. Yahtzee shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of Yahtzee.
+
+Indemnification
+You agree to indemnify, defend, and hold harmless Yahtzee, its affiliates, officers, directors, employees, agents, licensors, and suppliers from and against all claims, losses, expenses, damages, and costs, including reasonable attorneys' fees, resulting from any violation of these Terms of Service or any activity related to your use of Yahtzee.
+
+Changes to Terms of Service
+Yahtzee reserves the right to modify or amend these Terms of Service at any time and for any reason. Any changes will be posted on Yahtzee, and you are deemed to have accepted the Terms of Service on your first use of Yahtzee following the modifications.
