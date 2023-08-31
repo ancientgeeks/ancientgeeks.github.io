@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Ancient Geeks</title>
+    <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -29,16 +29,23 @@
 
         .content {
             margin: 20px;
-            text-align: left;
+            text-align: center;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            margin-top: 0;
+        .email-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
         }
 
-        p {
-            margin-bottom: 1em;
+        .email-link:hover {
+            background-color: #0069d9;
         }
 
         a {
@@ -57,12 +64,8 @@
         <h1>Contact Us</h1>
     </div>
     <div class="content">
-        <p>We're always eager to hear from our users and from fellow software enthusiasts. If you have any questions, comments, or ideas to share, or if you are looking for support for any of our apps, don't hesitate to get in touch with us.</p>
-        <p>
-            You can reach us at:
-            <a href="mailto:AncientGeeks@outlook.com">AncientGeeks@outlook.com</a>
-        </p>
-        <img src="support.png" alt="Contact Us" />
+        <p>Have a question or comment? We'd love to hear from you! Click the button below to open your email client and send us an email.</p>
+        <a href="mailto:contact@ancientgeeks.org" class="email-link">Send Email</a>
     </div>
 </body>
 </html>
