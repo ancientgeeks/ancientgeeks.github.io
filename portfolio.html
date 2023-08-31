@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Portfolio | Ancient Geeks</title>
+    <title>Our Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         .header {
@@ -20,7 +24,7 @@
         }
 
         .logo {
-            height: 100px;
+            height: 200px;
         }
 
         .content {
@@ -30,10 +34,36 @@
 
         .app-list {
             list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
         }
 
         .app-list-item {
-            margin: 10px 0;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .app-list-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -43,10 +73,27 @@
         <h1>Our Portfolio</h1>
     </div>
     <div class="content">
-        <p>Explore our collection of apps inspired by ancient wisdom and geek culture:</p>
+        <p>Explore our collection of apps, websites and articles inspired by ancient wisdom and geek culture:</p>
         <ul class="app-list">
-            <li class="app-list-item"><a href="/yahtzee/">Yahtzee</a></li>
-            <!-- Add more app links as needed -->
+            <li class="app-list-item">
+                <img src="yahtzee.png" alt="Yahtzee screenshot">
+                <h2>Yahtzee</h2>
+                <p>A web-based implementation of the classic game of Yahtzee for two players or robots. It is written in Flutter and is also available in iOS, Android, macOS and Windows versions.</p>
+                <p><a href="/yahtzee/">Play now</a> 
+            </li>
+            <li class="app-list-item">
+                <img src="HullNext.png" alt="HullNext screenshot">
+                <h2>Hull Next</h2>
+                <p>A web site promoting the town of Hull, Massachusetts</p>
+                <p><a href="http://www.hullnext.com">Check it out</a> 
+            </li>
+            <li class="app-list-item">
+                <img src="RoadTrip.png" alt="RoadTrip GPT screenshot">
+                <h2>Road Trip GPT</h2>
+                <p><strong>Coming soon</strong> - A generative AI-based travel guide app, written in flutter and will be available on Apple and Google Play app stores</p>
+                
+            </li>
+            <!-- Add more app items as needed -->
         </ul>
     </div>
 </body>
