@@ -14,33 +14,37 @@
     <div id="events"></div>
 
     <script>
-        // URLs of the JSON files
-        const urls = [
-          'HullLifeSavingMuseum.json',
-          'HullChamber.json',
-          'HullPride.json'
-          // Add more URLs as needed
-        ];
-
         // Fetch all the JSON files
         Promise.all(urls.map(url => fetch(url).then(response => response.json())))
           .then(dataArrays => {
             // Combine the data from the three sources into a single array of events
-            const events = [].concat(...dataArrays.map(data => data.events));
+            const events = [].concat(...dataArrays.map(data => data.events.map(event => ({
+              ...event,
+              source: data.source
+            }))));
 
             // Sort the events by start date
             events.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
             // Generate the HTML for each event
-            const html = events.map(event => `
-              <div class="event">
-                <h2>${event.title}</h2>
-                <p>${event.start_date} - ${event.end_date}</p>
-                <p>${event.description}</p>
-                <p>${event.where}</p>
-                <p>Source: ${event.source}</p>
-              </div>
-            `).join('');
+            const html = events.map(event => {
+              // Format the start and end dates
+              const startDate = new Date(event.start_date).toLocaleDateString();
+              const endDate = event.end_date ? new Date(event.end_date).toLocaleDateString() : null;
+
+              // Generate the date string
+              const dateString = endDate ? `${startDate} - ${endDate}` : startDate;
+
+              return `
+                <div class="event">
+                  <h2>${event.title}</h2>
+                  <p>${dateString}</p>
+                  <p>${event.description}</p>
+                  <p>${event.where}</p>
+                  <p>Source: ${event.source}</p>
+                </div>
+              `;
+            }).join('');
 
             // Insert the HTML into the webpage
             document.getElementById('events').innerHTML = html;
