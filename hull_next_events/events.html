@@ -13,54 +13,72 @@
 </head>
 
 <body>
-  <p>Hull Next Events</p>
   <div id="events"></div>
 
   <script>
-    // URLs of the JSON files
-    const urls = [
-      'HullLifeSavingMuseum.json',
-      'HullChamber.json',
-      'HullPride.json'
-      // Add more URLs as needed
-    ];
-    
-    // Fetch all the JSON files
-    Promise.all(urls.map(url => fetch(url).then(response => response.json())))
-      .then(dataArrays => {
-        // Combine the data from the three sources into a single array of events
-        const events = [].concat(...dataArrays.map(data => data.events.map(event => ({
-          ...event,
-          source: data.source
-        }))));
+      // URLs of the JSON files
+      const urls = [
+        'HullLifeSavingMuseum.json',
+        'HullChamber.json',
+        'HullPride.json'
+        // Add more URLs as needed
+      ];
 
-        // Sort the events by start date
-        events.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+      // Fetch all the JSON files
+      Promise.all(urls.map(url => fetch(url).then(response => response.json())))
+        .then(dataArrays => {
+          // Combine the data from the three sources into a single array of events
+          const events = [].concat(...dataArrays.map(data => data.events.map(event => ({
+            ...event,
+            source: data.source
+          }))));
 
-        // Generate the HTML for each event
-        const html = events.map(event => {
-          // Format the start and end dates
-          const startDate = new Date(event.start_date).toLocaleDateString();
-          const endDate = event.end_date ? new Date(event.end_date).toLocaleDateString() : null;
+          // Sort the events by start date
+          events.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
-          // Generate the date string
-          const dateString = endDate ? `${startDate} - ${endDate}` : startDate;
+          // Generate the HTML for each event
+          const html = events.map(event => {
+            // Create Date objects for the start and end dates
+            startDateTime = new Date(event.start_date);
+            endDateTime = event.end_date ? new Date(event.end_date) : null;
 
-          return `
-                <div class="event">
-                  <h2>${event.title}</h2>
-                  <p>${dateString}</p>
-                  <p>${event.description}</p>
-                  <p>${event.where}</p>
-                  <p>Source: ${event.source}</p>
-                </div>
-              `;
-        }).join('');
+            // Check for midnight start times
+            noTime = false;
+            if (startDateTime.getHours() === 0 && startDateTime.getMinutes() === 0) {
+              noTime = true;
+            }
 
-        // Insert the HTML into the webpage
-        document.getElementById('events').innerHTML = html;
-      })
-      .catch(error => console.error('Error:', error));
+            // Format the start and end dates
+            if (noTime) {
+              startDateTime = startDateTime.toLocaleDateString();
+              endDateTime = endDateTime ? endDateTime.toLocaleDateString() : null;
+            } else {
+              startDateTime = startDateTime.toLocaleString();
+              endDateTime = endDateTime ? endDateTime.toLocaleString() : null;
+            }
+
+            if (endDateTime && startDateTime === endDateTime) {
+              endDateTime = null;
+            }
+           
+            // Generate the date string
+            const dateString = endDateTime ? `${startDateTime} - ${endDateTime}` : startDateTime;
+
+            return `
+              <div class="event">
+                <h2>${event.title}</h2>
+                <p>${dateString}</p>
+                <p>${event.description}</p>
+                <p>${event.where}</p>
+                <p>Source: ${event.source}</p>
+              </div>
+            `;
+          }).join('');
+
+          // Insert the HTML into the webpage
+          document.getElementById('events').innerHTML = html;
+        })
+        .catch(error => console.error('Error:', error));
   </script>
 </body>
 
