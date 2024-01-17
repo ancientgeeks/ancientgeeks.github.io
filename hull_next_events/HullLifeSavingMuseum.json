@@ -1,0 +1,62 @@
+{
+    "source": "Hull Lifesaving Museum",
+    "url": "https://www.hulllifesavingmuseum.org/calendarevents.html",
+    "events": [
+        {
+            "start_date": "2024-01-10T00:00:00",
+            "end_date": "2024-01-19T00:00:00",
+            "title": "Museum Closed for Floor Refinishing",
+            "description": "",
+            "where": ""
+        },
+        {
+            "start_date": "2024-01-11T00:00:00",
+            "end_date": "",
+            "title": "Lecture: Sally Snowman, Last Lighthouse Keeper in America",
+            "description": "",
+            "where": "Memorial Middle School, Hull, MA"
+        },
+        {
+            "start_date": "2024-01-20T00:00:00",
+            "end_date": "",
+            "title": "HLM Annual Meeting",
+            "description": "",
+            "where": "Hull Lifesaving Museum, Hull, MA"
+        },
+        {
+            "start_date": "2024-02-02T00:00:00",
+            "end_date": "2024-02-03T00:00:00",
+            "title": "February 2 & 3 - Sea & Sky Art Submissions",
+            "description": "",
+            "where": "Hull Lifesaving Museum, Hull, MA"
+        },
+        {
+            "start_date": "2024-02-09T00:00:00",
+            "end_date": "",
+            "title": "Sea & Sky Juried Art Show Opening Night",
+            "description": "",
+            "where": "Hull Lifesaving Museum, Hull, MA"
+        },
+        {
+            "start_date": "2024-02-22T00:00:00",
+            "end_date": "",
+            "title": "Lecture: Adrienne Murphy, South Shore Neptune Skin Divers Club",
+            "description": "",
+            "where": "Hull Lifesaving Museum, Hull, MA"
+        },
+        {
+            "start_date": "2024-03-02T00:00:00",
+            "end_date": "",
+            "title": "43rd Annual Snow Row",
+            "description": "",
+            "where": "Windmill Point Boathouse, 185 Main St., Hull, MA"
+        },
+        {
+            "start_date": "2024-03-09T00:00:00",
+            "end_date": "",
+            "title": "Lecture: Linda Greenlaw - Swordfishing Boat Captain & Author",
+            "description": "",
+            "where": "Location: TBA"
+        }
+    ]
+}
