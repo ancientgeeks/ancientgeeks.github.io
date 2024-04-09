@@ -1,0 +1,35 @@
+.content {
+    margin: 20px;
+    text-align: center;
+}
+
+.app-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.app-list-item {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.app-list-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.appstore-badge {
+    width: 200px;
+    text-align: center;
+}
+
